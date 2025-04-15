@@ -36,15 +36,11 @@ const logoHomepage = computed(() => ({
   backgroundRepeat: 'no-repeat',
 }))
 
-
-
-
-
 </script>
 
 <template>
 
-  <div class="navbar px-4 py-1" style="background-color: rgb(0, 0, 0, 0.7); z-index: 2;">
+  <div class="navbar px-4 py-1" style="background-color: rgb(0, 0, 0, 0.7); z-index: 2;" v-if="false">
     <div class="container" style="color: white;">
       <div>Chat with us on <a href="https://api.whatsapp.com/send/?phone=31850043275&amp;text&amp;app_absent=0">WhatsApp</a>!
       </div>
@@ -69,53 +65,25 @@ const logoHomepage = computed(() => ({
 
       </router-link>
 
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="navbar-collapse collapse" id="collapseNavbar">
-
-        <span class="mx-auto" v-if="true">
-          Join our <a href="https://discord.gg/rcH7cvSfkg" target="_blank" rel="noopener noreferrer">Discord</a>
-        </span>
-
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#login-form">Login</a>
-          </li>          
-        </ul>
-        
-      </div>
+    
 
     </div>
   </nav>
 
-  <div class="container-fluid p-0 banner">
+  
 
-    <div class="row m-0" style="height: calc(100vh - 60px); overflow-y: auto;">
+  <div class="hover-expand-wrapper">
+    <!-- Left Panel -->
+    <div class="hover-expand-panel hover-expand-panel-left">
+      <img :src='GWR' alt="Left Panel Image" />
+    </div>
 
-      <div class="col-6 p-0">
-
-        <div :style="heliosBackground">
-          <div class="feature" style="display: flex; align-items: center; justify-content: center;">
-            <img :src='GWR' class="award-logo" style=""alt="Maritime Innovation Award Logo"/>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="col-6 p-0">
-
-        <div :style="anetteBackground">
-          <div class="feature" style="display: flex; align-items: center; justify-content: center;">
-            <img :src='MIA' class="award-logo" style=""alt="Maritime Innovation Award Logo"/>
-          </div>
-        </div>
-
-      </div>
-
+    <!-- Right Panel -->
+    <div class="hover-expand-panel hover-expand-panel-right">
+      <img :src='MIA'  alt="Right Panel Image" />
     </div>
   </div>
+
 </template>
 
 
@@ -143,4 +111,51 @@ const logoHomepage = computed(() => ({
   opacity: 0;
 }
 
+/* Reset margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main wrapper that takes up the full viewport */
+.hover-expand-wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Each panel defaults to 50% width */
+.hover-expand-panel {
+  width: 50%;
+  transition: width 0.4s ease;
+  overflow: hidden; /* Hides content if width shrinks to 0 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Example: we’ll name the left/right panels so it’s clear */
+.hover-expand-panel-left img,
+.hover-expand-panel-right img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hover left panel => it expands, right collapses */
+.hover-expand-panel-left:hover {
+  width: 100%;
+}
+.hover-expand-panel-left:hover ~ .hover-expand-panel-right {
+  width: 0;
+}
+
+/* Hover right panel => it expands, left collapses */
+.hover-expand-panel-right:hover {
+  width: 100%;
+}
+.hover-expand-panel-right:hover ~ .hover-expand-panel-left {
+  width: 0;
+}
 </style>
