@@ -1,0 +1,238 @@
+
+/* Airbnb Cereal */ 
+
+@font-face {
+    font-family: 'AirbnbCereal';
+    src: url('fonts/AirbnbCereal/airbnbcereal-medium-webfont.woff2') format('woff2'),
+         url('fonts/AirbnbCereal/airbnbcereal-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AirbnbCereal';
+    src: url('fonts/AirbnbCereal/airbnbcereal-light-webfont.woff2') format('woff2'),
+         url('fonts/AirbnbCereal/airbnbcereal-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AirbnbCereal';
+    src: url('fonts/AirbnbCereal/airbnbcereal-bold-webfont.woff2') format('woff2'),
+         url('fonts/AirbnbCereal/airbnbcereal-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AirbnbCereal';
+    src: url('fonts/AirbnbCereal/airbnbcereal-book-webfont.woff2') format('woff2'),
+         url('fonts/AirbnbCereal/airbnbcereal-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProductSans';
+    src: url('fonts/ProductSans/product_sans_bold_italic-webfont.woff2') format('woff2'),
+         url('fonts/ProductSans/product_sans_bold_italic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ProductSans';
+    src: url('fonts/ProductSans/product_sans_bold-webfont.woff2') format('woff2'),
+         url('fonts/ProductSans/product_sans_bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProductSans';
+    src: url('fonts/ProductSans/product_sans_italic-webfont.woff2') format('woff2'),
+         url('fonts/ProductSans/product_sans_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ProductSans';
+    src: url('fonts/ProductSans/product_sans_regular-webfont.woff2') format('woff2'),
+         url('fonts/ProductSans/product_sans_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body { 
+    height: 100%;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+
+}
+
+body {
+    font-family: 'AirbnbCereal', sans-serif;
+    min-height: 100%;
+    width: 100%;
+    color: rgb(17,36, 77);
+    line-height: 1.75rem;
+    background: rgb(0, 4, 51);
+}
+
+#app {
+    height: 100%;
+}
+
+
+h1, h2, h3 {
+  font-family: 'ProductSans', sans-serif;
+  font-weight: bold;
+}
+
+.wattlab-btn {
+    font-family: 'ProductSans', sans-serif;
+    font-weight: bold;
+    min-height: 50px;
+    padding: 14px 50px;
+    border-radius: 5px;
+    background-color: #ffbe00;
+    transition: background-color 300ms ease;
+    -webkit-transition: background-color 300ms ease;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #29333D;
+    border: 0;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.wattlab-btn:hover {
+    color: white;
+    background-color: #df9d0e;
+}
+
+.wattlab-card-round {
+  border-radius: 25px 0 0 0;
+  background-color: white;
+}
+
+.wattlab-card-result {
+  border-radius: 0;
+  background-color: white;
+  box-shadow: 1px 1px 3px #ccc;
+}
+
+.emph-text-large {
+  font-family: 'ProductSans' !important;
+  color: rgb(18, 126, 223);
+  font-weight: bold;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 24px;
+}
+
+.title-col{
+  color: rgb(17, 36, 77);
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.wattlab-container {
+  background-color: rgb(240, 240, 240);
+  border-top: 1px solid rgba(52, 66, 104, 0.07);
+  border-bottom: 1px solid rgba(52, 66, 104, 0.07);
+  background-position: 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wattlab-container-white {
+  background-color: #fff;
+  border-top: 1px solid rgba(52, 66, 104, 0.07);
+  border-bottom: 1px solid rgba(52, 66, 104, 0.07);
+  background-position: 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-image-container {
+    display: block; width: 100%;
+    height: 350px;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+
+/* lg */
+@media (min-width: 992px) { 
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  .gallery-thumbnail-copy{
+    max-height: 227px;
+  }
+  .left-align-container{
+    max-width: 400px;
+  }
+  .card-image-container {
+    height: 225px;
+  }
+  .title-col{
+    min-height: 90px;
+  }
+  .content-col {
+    min-height: 225px;
+  }
+  .wattlab-container {
+    padding-bottom: 150px !important;
+    padding-top: 150px !important;
+  }
+
+  .wattlab-container-white {
+    padding-bottom: 150px !important;
+    padding-top: 150px !important;
+  }
+}
+
+
+/* xl */ 
+@media (min-width: 1200px) { 
+  .left-align-container{
+    max-width: 550px;
+  }
+  .title-col{
+    min-height: 90px;
+  }
+  .header-text {
+    width: 75%;
+  }
+  .card-text-container{
+    min-height: 180px;
+  }
+  .card-image-text-image-bottom{
+    min-height: 180px;
+  }
+  .content-col {
+    min-height: 172px;
+  }
+  
+}
+
+/* xxl */
+@media (min-width: 1400px) { 
+  .title-col{
+    min-height: 75px;
+  }
+}
+
+
+
