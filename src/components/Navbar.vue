@@ -1,17 +1,19 @@
 <script setup>
 // background-color: rgb(0, 4, 51);
+  //rgb(17,36, 77)
+  //rgb(7, 17, 28)
 </script>
 
 <template>
 
-  <div class="navbar px-4 py-1" style="background-color: rgb(0, 4, 51, 0.7); z-index: 2;" v-if="false">
+  <div class="navbar px-4 py-1" style="background-color: rgb(7, 17, 28, 0.7); z-index: 2;" v-if="false">
     <div class="container" style="color: white;">
       <div>Chat with us on <a href="https://api.whatsapp.com/send/?phone=31850043275&amp;text&amp;app_absent=0">WhatsApp</a>!
       </div>
     </div>
   </div>
 
-   <nav class="navbar text-white p-2" style="z-index: 3;">
+   <nav class="navbar text-white p-2" style="z-index: 3; background-color: rgb(7, 17, 28);">
     <div class="container">
       <router-link class="navbar-brand abs" to="/">
 

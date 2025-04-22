@@ -39,6 +39,9 @@ import linkedinIcon from '/src/assets/icons/linkedin.png';
            <div class="col-lg my-auto">
             <ul class="list-inline pull-right my-0" style="">
               <li><a style="color: #9d9d9d" href="/terms-and-conditions">Terms & conditions</a></li>
+              <li><a style="color: #9d9d9d" href="/terms-and-conditions">Newsroom</a></li>
+              <li><a style="color: #9d9d9d" href="/terms-and-conditions">Inland‑waterway vessels</a></li>
+              <li><a style="color: #9d9d9d" href="/terms-and-conditions">Seagoing vessels</a></li>
             </ul>
           </div>
           <div class="col-lg-2 my-auto" style="">
@@ -60,7 +63,7 @@ import linkedinIcon from '/src/assets/icons/linkedin.png';
 
       <hr>
 
-      <div  style="text-align: center;">
+      <div style="text-align: center;">
         &copy; 2025 Wattlab (KRSolar B.V.). All rights reserved.
       </div>
 
@@ -80,12 +83,13 @@ import linkedinIcon from '/src/assets/icons/linkedin.png';
 
 footer li { 
   text-align: center;
+  
 
 }
 
 footer {
+  color: grey;
   margin-top: 30px; 
-  color: white;
   /* background-color: rgb(2,2,49); */
   background-color: rgb(4, 17, 29);
   padding-top: 60px; 
