@@ -39,9 +39,9 @@ import linkedinIcon from '/src/assets/icons/linkedin.png';
            <div class="col-lg my-auto">
             <ul class="list-inline pull-right my-0" style="">
               <li><a style="color: #9d9d9d" href="/terms-and-conditions">Terms & conditions</a></li>
-              <li><a style="color: #9d9d9d" href="/terms-and-conditions">Newsroom</a></li>
-              <li><a style="color: #9d9d9d" href="/terms-and-conditions">Inland‑waterway vessels</a></li>
-              <li><a style="color: #9d9d9d" href="/terms-and-conditions">Seagoing vessels</a></li>
+              <li><a style="color: #9d9d9d" href="/en/newsroom">Newsroom</a></li>
+              <li><a style="color: #9d9d9d" href="/en/solarhatch">Inland‑waterway vessels</a></li>
+              <li><a style="color: #9d9d9d" href="/en/solardeck">Seagoing vessels</a></li>
             </ul>
           </div>
           <div class="col-lg-2 my-auto" style="">

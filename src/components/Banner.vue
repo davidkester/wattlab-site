@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRouter, RouterView } from 'vue-router';
 
 const hovering = ref(false);
@@ -36,6 +36,22 @@ const logoHomepage = computed(() => ({
   backgroundRepeat: 'no-repeat',
 }))
 
+
+
+onMounted(() => {
+  const box1 = document.querySelector('.box1');
+  const box2 = document.querySelector('.box2');
+
+  const content1 = document.querySelector('.content1');
+  const content2 = document.querySelector('.content2');
+
+  box2.addEventListener('mouseenter', () => content1.style.visibility = 'hidden');
+  box2.addEventListener('mouseleave', () => content1.style.visibility = '');
+
+  box1.addEventListener('mouseenter', () => content2.style.visibility = 'hidden');
+  box1.addEventListener('mouseleave', () => content2.style.visibility = '');
+})
+
 </script>
 
 <template>
@@ -46,17 +62,17 @@ const logoHomepage = computed(() => ({
   
  <Navbar/>
 
-  <div class="container-test" style="height: calc(100vh - 58px); overflow-y: auto; ">
+  <div class="container-test" style="height: calc(100vh - 62px); overflow-y: auto; ">
    
-    <div class="box" :style="heliosBackground">
+    <div class="box box1" :style="heliosBackground">
 
       <div class="inner" style="display: none; align-items: center; justify-content: center;">
         <img :src='GWR' class="award-logo" style="max-width: 20%;" alt="Maritime Innovation Award Logo"/>
       </div>
 
-      <div class="content-transparent">
+      <div class="content-transparent content1">
 
-        <router-link class="navbar-brand abs" to="/en/inland">
+        <router-link class="navbar-brand abs" to="/en/solarhatch">
           <h1 style="">SolarHatch</h1>
 
           <div class="subtitle" style="color: white !important">for inland shipping</div>
@@ -74,12 +90,12 @@ const logoHomepage = computed(() => ({
     </div>
 
 
-    <div class="box" :style="anetteBackground">
+    <div class="box box2" :style="anetteBackground">
       <div class="inner" style="display: none; align-items: center; justify-content: center;">
         <img :src='MIA' class="award-logo" style="max-width: 40%;" alt="Maritime Innovation Award Logo"/>
       </div>
 
-      <div class="content-transparent" style="">
+      <div class="content-transparent content2" style="">
 
         <router-link class="navbar-brand abs" to="/en/solardeck">
 
@@ -99,6 +115,7 @@ const logoHomepage = computed(() => ({
   </div>
 </div>
 
+
 <Footer />
 
 </template>
@@ -106,6 +123,7 @@ const logoHomepage = computed(() => ({
 
 
 <style scoped>
+
 
 .award-logo {
   transition: opacity 0.5s;
@@ -149,7 +167,7 @@ const logoHomepage = computed(() => ({
 
 /* The hovered box expands to flex: 9 */
 .box:hover {
-  flex: 9;
+  flex: 2;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
   /* box-shadow: none; */
 }

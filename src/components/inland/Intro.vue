@@ -41,7 +41,7 @@ const schuifluikConnectorBackground = computed(() => ({
 
         <div class="col-lg p-2 py-lg-0 px-lg-3 mt-3 mt-lg-0">
           <div class="wattlab-card-round p-4">
-            <h3 class="mb-3 title-col mt-1">Generating power and saving money at the same time</h3>
+            <h3 class="mb-3 title-col mt-1">Get used to generate power for now and later and at the same time save money</h3>
             <div class="content-col">
               Enjoy a return on investment with no hidden costs. Stop paying fluctuating fuel prices and benefit from the many subsidies available for purchasing Solar Hatches.
             </div>

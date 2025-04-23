@@ -7,6 +7,8 @@ import BeforeAndAfter from '/src/components/inland/BeforeAndAfter.vue';
 import AutonomousEnergy from '/src/components/inland/AutonomousEnergy.vue';
 import Results from '/src/components/inland/Results.vue';
 
+import ContactForm from '/src/components/ContactForm.vue';
+
 
 </script>
 
@@ -17,16 +19,9 @@ import Results from '/src/components/inland/Results.vue';
    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
     <source :src="bannerVideo" type="video/mp4">
    </video>
-    
-    <div class="navbar px-4 py-1" style="background-color: rgb(0, 0, 0, 0.7); z-index: 2;">
-      <div class="container" style="color: white;">
-        <div>Chat with us on <a href="https://api.whatsapp.com/send/?phone=31850043275&text&app_absent=0">WhatsApp</a>!</div>
-          <div id="language-options" style="margin-left: auto;margin-right: 0;"></div>
-        </div>
-      </div>
-
    
-    <Navbar />
+    <Navbar :backgroundColor="''"/>
+
     <div class="overlay"></div> 
     
 
@@ -56,7 +51,7 @@ import Results from '/src/components/inland/Results.vue';
   <BeforeAndAfter />
   <AutonomousEnergy />
   <Results />
-
+  <ContactForm :source="'solarhatch'" :language="'en'"/>
 
   <Footer />
 

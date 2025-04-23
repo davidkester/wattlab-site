@@ -18,17 +18,18 @@ const router = createRouter({
       name: 'solardeck',
       component: SolarDeckView,
     },{
-      path: '/en/inland',
-      name: 'inland',
+      path: '/en/solarhatch',
+      name: 'solarhatch',
       component: InlandView,
     },{
-      path: '/:lang?/newsroom',
+      path: '/:lang/newsroom',
       name: 'newsroom',
       component: Newsroom,
     },{
-      path: '/:lang?/newsroom/:year?/:month?/:title',
+      path: '/:lang/newsroom/:year/:month/:title',
       name: 'newsroom-article',
       component: NewsroomArticleView,
+      props: ({params}) => ({lang: params.lang, year: params.year, month: params.month, title: params.title })
     }
   ]
   

@@ -11,7 +11,7 @@
     <div class="container">
 
         <div class="mb-4" style="text-align: center;">
-          <h2 class="pb-2 mb-3 mx-auto">The Results of Solar Hatches</h2>
+          <h2 class="pb-2 mb-3 mx-auto">The Results in Numbers</h2>
         </div>
 
         <div class="row mx-auto" style="max-width: 850px;">
@@ -44,7 +44,7 @@
         <div class="col p-3">
           <div class="p-3" >
             <h3 class="emph-text-large pb-2" style="display: none;">Discover the experiences of our existing users</h3>
-            <div class="disclainer-text" style="text-align: center;">Based on a complete Solar Hatch cover. Numbers are indicative and dependent on the number of Solar Hatches, battery capacity, your vessel, and sailing profile.</div>
+            <div class="disclainer-text" style="text-align: center;">Based on a complete SolarHatch cover. Numbers are indicative and dependent on the number of Solar Hatches, battery capacity, your vessel, and sailing profile.</div>
           </div>
         </div>
 

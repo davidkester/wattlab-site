@@ -1,7 +1,35 @@
-<script setup>
+<script>
 // background-color: rgb(0, 4, 51);
   //rgb(17,36, 77)
   //rgb(7, 17, 28)
+
+export default {
+  data() {
+    return {
+    }
+  },
+  components: {
+  },
+  watch: {
+  },
+  props: {
+    backgroundColor: {
+      type: String,
+      default: "rgb(7, 17, 28)"  
+    }
+  },
+  computed: {
+    navBarStyle: function(){
+      return {'z-index': 3, backgroundColor: this.backgroundColor};
+    }
+  },
+  watch: {
+  },
+  methods: {
+  },
+  mounted() { 
+  }
+}
 </script>
 
 <template>
@@ -13,7 +41,7 @@
     </div>
   </div>
 
-   <nav class="navbar text-white p-2" style="z-index: 3; background-color: rgb(7, 17, 28);">
+   <nav class="navbar text-white p-3 navbar-expand-lg" :style="navBarStyle">
     <div class="container">
       <router-link class="navbar-brand abs" to="/">
 
@@ -31,6 +59,18 @@
 
       </router-link>
 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto my-auto mb-lg-0">
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="/en/newsroom">News & Updates</a>
+          </li>
+          <li class="nav-item mx-2" v-if="false">
+            <a class="nav-link" href="/en/contact">Contact</a>
+          </li>
+          
+        </ul>
+      </div>
+
     </div>
   </nav>
 
@@ -39,4 +79,36 @@
 
 
 <style scoped>
+
+
+.nav-link {
+  color: #F0F0F0 !important; 
+  text-transform: uppercase !important; 
+  font-family: 'AirbnbCereal', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  letter-spacing: 3px !important;
+  position: relative;
+  display: inline-block;      /* needed for pseudo-element positioning */
+  transition: transform 0.3s ease; /* smooth text move */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;               /* thickness of underline */
+  background-color: white;
+  transition: width 0.3s ease; /* smooth underline grow */
+}
+
+.nav-link:hover {
+  transform: translateY(-2px); /* move text up 2px */
+}
+
+.nav-link:hover::after {
+  width: 100%;               /* expand underline */
+}
 </style>
