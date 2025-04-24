@@ -16,6 +16,10 @@ const heliosBackground = computed(() => ({
   background: `url(${heliosUrl})`
 }))
 
+const visibleArticles = computed(() => {
+  return newsRoom.filter( i => i.visible == true );
+})
+
 </script>
 
 <template>  
@@ -46,7 +50,7 @@ const heliosBackground = computed(() => ({
         <h2 style="text-align: center;" class="mb-5">Latest news</h2>
 
           <div class="row" >
-            <template v-for="(item, index) in newsRoom">
+            <template v-for="(item, index) in visibleArticles">
 
             <div class="col-md card-image my-3 mx-md-3">
               <a style="text-decoration: none;" :href="`/en/newsroom/${item.year}/${item.month}/${item.url}`">

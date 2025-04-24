@@ -31,7 +31,7 @@ import linkedinIcon from '/src/assets/icons/linkedin.png';
            <div class="col-lg my-auto">
             <ul class="list-inline pull-right my-0" style="">
               <li>info@wattlab.nl</li>
-              <li >+31 85 004 32 75</li>
+              <li>+31&nbsp;(0)8&nbsp;50&nbsp;04&nbsp;32&nbsp;75</li>
               <li>Coc: <span class="copy-content">68536550</span></li>
               <li style="white-space: nowrap">Vat id: <span class="copy-content">NL 8574 88 077 B01</span></li>
             </ul>

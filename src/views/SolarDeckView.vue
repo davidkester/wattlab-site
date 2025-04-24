@@ -92,9 +92,10 @@ const handySizeBackground = computed(() => ({
     </template>
 
     <template #col2>
-      <p style="font-weight: bold;">SolarDeck is a proven solar energy solution, now optimized for bulk carriers of all sizes. It offers a sustainable and cost-effective alternative to traditional power sources—enhancing operational efficiency, reducing fuel consumption, and delivering a strong financial return.</p>
+      <p style="font-weight: bold;">SolarDeck is a proven solar energy solution, now optimized for bulk carriers of all sizes. It offers a sustainable and cost-effective alternative to traditional power sources—enhancing operational efficiency, reducing fuel consumption, and delivering a strong financial return. Now available for both newbuild as well as existing vessels.</p>
 
-      <p>With a return on investment in just 2–5 years, SolarDeck enables shipowners and operators to meet environmental regulations while improving profitability—without compromising on reliability or performance,</p>
+      <p>With a return on investment in just 2–5 years, SolarDeck enables shipowners and operators to meet environmental regulations while improving profitability—without compromising on reliability or performance.</p>
+      <a href="#contact" class="wattlab-btn py-3" role="button" aria-pressed="true" style="max-width: 300px;">Contact us</a> 
     </template>
   </SimpleTwoComponent>
 
@@ -105,7 +106,7 @@ const handySizeBackground = computed(() => ({
     </template>
 
     <template  #col1>
-      <h3 class="mb-3 title-col mt-1">Increase Day-rate</h3>
+      <h3 class="mb-3 title-col mt-1">Increase Day-Rate</h3>
       <div class="content-col">
         <img href="#" :src="increaseIcon" style="margin-right:auto; margin-left:auto; width:40%;display:block">
       </div>
@@ -119,7 +120,7 @@ const handySizeBackground = computed(() => ({
     </template>
 
     <template  #col3>
-      <h3 class="mb-3 title-col mt-1">Excellent RIO</h3>
+      <h3 class="mb-3 title-col mt-1">Excellent Return on Investment</h3>
       <div class="content-col">
         <img href="#" :src="sustainableIcon" style="margin-right:auto; margin-left:auto; width:40%;display:block">
       </div>
@@ -135,14 +136,6 @@ const handySizeBackground = computed(() => ({
 
     <template #col1>
       <table>
-        <tr>
-          <th>ROI</th>
-          <td class="highlight">2-5 years</td>
-        </tr>
-        <tr>
-          <th>Internal Rate of Return (IRR)</th>
-          <td class="highlight">25%</td>
-        </tr>
         <tr>
           <th>Annual Energy Yield</th>
           <td class="highlight">10 MWh</td>
@@ -172,15 +165,17 @@ const handySizeBackground = computed(() => ({
     </template>
 
     <template  #col1>
-      <p style="font-weight: bold;">A plug-and-play solar system designed for maritime conditions</p>
+      <div>
+        <p style="font-weight: bold;">A plug-and-play solar system designed for maritime conditions</p>
 
-      <p>SolarDeck delivers clean, reliable energy directly on deck—reducing reliance on auxiliary engines. Built with robust marine-grade materials, the system is designed for fast installation and minimal maintenance.</p>
+        <p>SolarDeck delivers clean, reliable energy directly on deck—reducing reliance on auxiliary engines. Built with robust marine-grade materials, the system is designed for fast installation and minimal maintenance.</p>
 
-      <ul>
-        <li>Easily implemented on both newbuild and existing vessels</li>
-        <li>Installed within 8 hours</li>
-        <li>Stackable solution</li>
-      </ul>
+        <ul>
+          <li>Easily implemented on both newbuild and existing vessels</li>
+          <li>Installed within 8 hours</li>
+          <li>Stackable solution</li>
+        </ul>
+      </div>
 
     </template>
 
@@ -228,7 +223,7 @@ const handySizeBackground = computed(() => ({
           <div class="">
             <div class="card-image-container" :style="vesselRedBackground"></div>
             <div class="card-bottom-title">
-              <h3 class="m-2">Deep Sea Sessels</h3>
+              <h3 class="m-2">Deep Sea Vessels</h3>
             </div>
           </div>
           
@@ -238,7 +233,7 @@ const handySizeBackground = computed(() => ({
     </div> 
   </div> 
 
-    <SimpleOneComponent>
+  <SimpleOneComponent v-if="false"> 
     <template #header>
       <h2 class="pb-2 mb-3 mx-auto">Effect on Regulations</h2>
     </template>
@@ -272,7 +267,36 @@ const handySizeBackground = computed(() => ({
         </table>
 
     </template>
+  </SimpleOneComponent>
 
+
+  <SimpleOneComponent>
+    <template #header>
+      <h2 class="pb-2 mb-3 mx-auto">Effect on Regulations</h2>
+    </template>
+
+    <template  #col1>
+      <div class="mx-auto" style="max-width: 750px;">
+        <h3>IMO Regulations</h3>
+
+        <ul>
+          <li><span style="font-weight: bold;">Improves EEXI rating: </span> SolarDeck reduces overall fuel consumption, which leads to a better <a href="https://www.imo.org/en/MediaCentre/HotTopics/Pages/EEXI-CII-FAQ.aspx" target="_blank" rel="noopener noreferrer">Energy Efficiency Existing Ship Index (EEXI)</a> score.</li>
+          <li><span style="font-weight: bold;">Improves CII rating: </span> By enabling ships to operate with lower emissions, the <a href="https://www.imo.org/en/MediaCentre/HotTopics/Pages/EEXI-CII-FAQ.aspx" target="_blank" rel="noopener noreferrer">Carbon Intensity Indicator (CII)</a> rating improves over time.</li>
+        </ul>
+
+         <h3>EU Regulations</h3>
+
+         <ul>
+        <li><span style="font-weight: bold;">Reduces FuelEU Maritime compliance costs: </span> By using solar power, the dependency on fossil fuels decreases, helping to meet the renewable energy targets under the <a href="https://transport.ec.europa.eu/transport-modes/maritime/decarbonising-maritime-transport-fueleu-maritime_en" target="_blank" rel="noopener noreferrer">FuelEU Maritime</a> regulation and reducing penalties.</li>
+        <li><span style="font-weight: bold;">Lowers EU ETS costs: </span> Less fuel use equals fewer CO₂ emissions, which directly reduces the number of allowances required under the <a href="https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets_en" target="_blank" rel="noopener noreferrer">EU Emissions Trading System</a>.</li>
+        </ul>
+      </div>
+
+    </template>
+
+    <template #col2>
+     
+    </template>
   </SimpleOneComponent>
 
   <ContactForm :source="'solardeck'" :language="'en'"/>

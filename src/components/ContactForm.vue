@@ -95,7 +95,12 @@ export default {
               How much solar energy can <span style="font-weight: 600;">you</span> generate? And how does this translate to your annual fuel economy?
             </div>
             <div class="mb-3">
-              Enter your information here and receive a quote and yield indication without obligation, or call us directly.
+              Enter your information here and receive a quote and yield indication without obligation, or contact us directly.
+            </div>
+            <div class="mb-3">
+              <b>Contact us</b>
+              <div>+31&nbsp;(0)8&nbsp;50&nbsp;04&nbsp;32&nbsp;75</div>
+              <div>info@wattlab.nl</div>
             </div>
           </div>
         </div>
@@ -168,7 +173,8 @@ export default {
 
             
             </fieldset>
-            <div class="mt-3" style="text-align: center; border: 2px solid; border-radius: 5px; padding-top: 2px; padding-right: 6px; padding-bottom: 3px; padding-left: 6px; ">
+
+            <div v-if="false" class="mt-3" style="text-align: center; border: 2px solid; border-radius: 5px; padding-top: 2px; padding-right: 6px; padding-bottom: 3px; padding-left: 6px; ">
               <div class="mt-2 mb-1" for="customer-message">Would you rather speak to someone? Call&nbsp;+31&nbsp;85&nbsp;004&nbsp;32&nbsp;75</div>
             </div>
               
