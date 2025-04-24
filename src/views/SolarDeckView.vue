@@ -130,6 +130,7 @@ const handySizeBackground = computed(() => ({
   <SimpleOneComponent>
     <template #header>
       <h2 class="pb-2 mb-3 mx-auto">Proven Impact</h2>
+
     </template>
 
     <template #col1>
@@ -155,6 +156,10 @@ const handySizeBackground = computed(() => ({
           <td class="highlight">96 metric tons</td>
         </tr>
       </table>
+
+      <div style="text-align: center;" class="pt-3">
+        <small>Based on MV Vertom Anette (7280 MT)</small>
+      </div>
 
     </template>
 

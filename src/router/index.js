@@ -21,7 +21,8 @@ const router = createRouter({
       path: '/en/solarhatch',
       name: 'solarhatch',
       component: InlandView,
-    },{
+    }
+    ,{
       path: '/:lang/newsroom',
       name: 'newsroom',
       component: Newsroom,

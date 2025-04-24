@@ -121,7 +121,7 @@ import sustainableIcon from '/src/assets/images/solardeck/sustainable.svg';
             <li>Live data insights</li>
           </ul>
 
-          <small>Based on MS Vertom Anette</small>
+          <small>Based on MV Vertom Anette (7280 MT)</small>
 
         </div>
 

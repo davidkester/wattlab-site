@@ -61,7 +61,7 @@ export default {
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto my-auto mb-lg-0">
-          <li class="nav-item mx-2">
+          <li class="nav-item mx-2" v-if="false">
             <a class="nav-link" href="/en/newsroom">News & Updates</a>
           </li>
           <li class="nav-item mx-2" v-if="false">
