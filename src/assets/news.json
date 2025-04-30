@@ -1,11 +1,12 @@
 [{
-	"type": "Press Release",
+	"type": "Update",
 	"visible":true,
 	"tags": ["sea"],
 	"date": "24-04-2025",
 	"month": "04",
 	"year": "2025",
 	"url": "solardeck-ready-to-expand-into-seagoing-shipping",
+	"lang": "en",
 	"title": "Wattlab’s SolarDeck: ready to expand into seagoing shipping",
 	"intro": "Wattlab, the Dutch ‘solar power for shipping’ start-up, is not a company that rests on its laurels. After demonstrating impressive growth in panel-project that has made its way into the Guinness Book of World Records), Wattlab is currently taking its first steps in the seagoing shipping sector. With the first pilot project now complete, it’s time for us to catch up with the company’s founder and CEO Bo Salet to find out more about the results from the pilot project. And to learn more about Wattlab’s ambitions to bring solar power to seagoing shipping with a product called SolarDeck.",
 	"body": [
@@ -24,20 +25,42 @@
 },{
 	"type": "Press Release",
 	"tags": ["sea"],
-	"visible":false,
-	"date": "24-04-2025",
+	"visible":true,
+	"date": "30-04-2025",
 	"month": "04",
 	"year": "2025",
 	"url": "wattlab-launches-solardeck",
+	"lang": "en",
 	"title": "Wattlab launches SolarDeck: plug-and-play solar power for seagoing shipping",
 	"intro": "Wattlab, the Netherlands-based maritime solar specialist, is proud to introduce its SolarDeck to the seagoing shipping industry. SolarDeck is a modular and scalable system of deck-mounted solar panels that yield significant reductions in fuel consumption and CO2 emissions. Moreover, based on installation on a seagoing general cargo vessel, SolarDeck combines substantial savings via Fuel EU Maritime and EU ETS regulations and an expected return on investment of 3-5 years.",
 	"body": ["Established in 2017, Wattlab has spent its first years of operations focusing on the inland shipping sector with its Solar Flatrack. This is a modular solar energy system consisting of movable and stackable integrated solar panels and inverters. To date, Wattlab’s SolarHatches have been installed on more than 25 inland shipping vessels.",
 	"With the aim to reduce fuel costs for seagoing shipowners and facilitate the continued decarbonisation of the maritime sector, Wattlab is now expanding into the seagoing shipping industry with SolarDeck.",
 	"“At all times during the design of SolarDeck, we prioritised the shipowner’s requirements. We know that ‘time is money’. That’s why the SolarDeck can be installed in a minimum amount of time using container twist lock fittings. It also does not impact normal loading and unloading procedures,” says Wattlab’s CEO Bo Salet. “However, we also know – for cargo shipowners especially – that ‘space is money’. In the event of a deck load such as offshore wind blades, the ship’s crew can store the SolarDeck inside the volume of a 20-foot container, thus freeing up the deck for cargo.”",
-	"SolarDeck has proven credentials: in collaboration with the Dutch Organisation for Applied Scientific Research TNO and international shipping company Vertom, Wattlab has spent the previous 18 months developing and testing the new system on board Vertom’s 7,280dwt general purpose dry cargo vessel Anette. The results from the testing phase are positive.",
+	"Developing SolarDeck with Vertom and TNO. SolarDeck has proven credentials: in collaboration with the Dutch Organisation for Applied Scientific Research TNO and international shipping company Vertom, Wattlab has spent the previous 18 months developing and testing the new system on board Vertom’s 7,280dwt general purpose dry cargo vessel Anette, in a project co-financed by the European Union’s Just Transition Fund. The results from the testing phase are positive.",
 	"“The test results show that SolarDeck performs well in the tougher environment – in terms of salinity and rougher sea states – of coastal shipping. Because salt water can drain freely from the solar panels, there’s no chance of a salt crust forming. As such, SolarDeck generates the expected power output levels,” Salet explains. “Furthermore, the system is robust enough to withstand storms as well as the usual day-to-day activities on board a seagoing cargo ship – while staying safe at all times.”",
-	"Based on the test results (Vertom’s Anette is 119 metres long and 14 metres wide), Wattlab predicts reductions of 20 MT fuel and 68 MT CO₂ emissions per year. Such numbers are substantial enough to have a significant impact on a shipowner’s EEXI and CII scores in addition to potential savings via Fuel EU Maritime and EU ETS regulations.",
-	"“We are excited to introduce SolarDeck to the seagoing shipping industry – to show shipowners what this system can mean to their operations,” Salet concludes. “SolarDeck isn’t just a green upgrade. With a return on investment of 3 to 5 years, it’s a smart investment.”"
+	"Fuel and emission reductions. Based on the test results (Vertom’s Anette is 119 metres long and 14 metres wide), Wattlab predicts reductions of 20 MT fuel and 68 MT CO₂ emissions per year for this coaster-type. Such numbers are substantial enough to have a significant impact on a shipowner’s EEXI and CII scores in addition to potential savings via Fuel EU Maritime and EU ETS regulations. Note that for larger vessels, the efficiency gains are also (much) larger.",
+	"“We are excited to introduce SolarDeck to the seagoing shipping industry – to show shipowners what this system can mean to their operations,” Salet concludes. “SolarDeck isn’t just a green upgrade. With a return on investment of 3 to 5 years, it’s a smart investment.”",
+	"JTF Fund. Wattlab’s SolarDeck pilot project has been co-financed by the European Union’s Just Transition Fund (JTF). The JTF is a new instrument of the Cohesion Policy 2021-2027, as the first pillar of the Just Transition Mechanism in the context of the European Green Deal aiming at achieving EU climate-neutrality by 2050."
+	]
+},{
+	"type": "Persbericht",
+	"tags": ["sea"],
+	"visible":true,
+	"date": "30-04-2025",
+	"month": "04",
+	"year": "2025",
+	"url": "wattlab-lanceert-solardeck",
+	"lang": "nl",
+	"title": "Wattlab lanceert SolarDeck: plug-and-play zonne-energie voor de zeevaart",
+	"intro": "Het Nederlandse clean-tech bedrijf Wattlab, specialist in maritieme zonne-energie, introduceert met trots zijn nieuwe oplossing voor de zeevaart: SolarDeck. SolarDeck is een modulair en schaalbaar systeem van dek-gemonteerde zonnepanelen dat aanzienlijke besparingen oplevert op brandstofverbruik en CO₂-uitstoot. Op basis van een installatie op een zeegaand general cargo-schip combineert SolarDeck substantiële voordelen via FuelEU Maritime en EU ETS-regelgeving met een verwachte terugverdientijd van 3 tot 5 jaar.",
+	"body": ["Wattlab, opgericht in 2017, richtte zich de eerste jaren op de binnenvaart met het Solar Flatrack-systeem – een modulair energiesysteem met verplaatsbare en stapelbare zonnepanelen en geïntegreerde omvormers. Inmiddels zijn Wattlab’s SolarHatches geïnstalleerd op meer dan 25 binnenvaartschepen.",
+		"Met de ambitie om brandstofkosten voor zeevarende reders te verlagen en de verduurzaming van de sector te versnellen, breidt Wattlab nu uit naar de zeevaart met SolarDeck. “Bij het ontwerpen van SolarDeck hebben we steeds de eisen van reders centraal gesteld. We weten: tijd is geld. Daarom is SolarDeck binnen minimale tijd te installeren dankzij twistlock-containeraansluitingen,” zegt Bo Salet, CEO van Wattlab.",
+		"“We weten ook: ruimte is geld. Als het dek wordt gebruikt voor bijvoorbeeld offshore windturbinebladen, kan de bemanning het SolarDeck systeem opslaan in een 20-voets container, waardoor het dek weer beschikbaar is voor vracht.”",
+		"Ontwikkeld met Vertom en TNO. SolarDeck is uitvoerig getest: in samenwerking met TNO en rederij Vertom werkte Wattlab de afgelopen 18 maanden aan de ontwikkeling en praktijkproeven aan boord van Vertom’s 7.280 dwt general cargo-schip Anette. Het project werd mede gefinancierd door het Just Transition Fund (JTF) van de Europese Unie. De testresultaten zijn positief.",
+		"“SolarDeck presteert goed in de zwaardere omstandigheden van de kustvaart, zoals zout, wind en golfslag,” legt Salet uit. “Zout water stroomt gemakkelijk weg van de panelen, waardoor er geen zoutkorst kan ontstaan. De opgewekte energie ligt op het verwachte niveau. Bovendien is het systeem robuust genoeg om stormen en dagelijks gebruik op een zeeschip aan te kunnen – met behoud van veiligheid.”",
+		"Brandstof- en emissiereductie. Op basis van de testresultaten met de Annette (119 m x 14 m), voorspelt Wattlab een jaarlijkse besparing van 20 ton brandstof en 68 ton CO₂ voor dit type coaster. Deze cijfers hebben een duidelijke invloed op EEXI- en CII-scores, en leveren directe voordelen op binnen de FuelEU Maritime en EU ETS-kaders. Voor grotere schepen zijn de potentiële besparingen nog aanzienlijk groter.",
+		"“We zijn erg blij met de testresultaten en zijn enthousiast om SolarDeck nu te kunnen introduceren in de zeevaart – en om reders te laten zien wat dit systeem voor hun operatie kan betekenen,” zegt Salet. “SolarDeck is niet alleen een groene upgrade. Met een terugverdientijd van 3 tot 5 jaar is het ook gewoon een slimme investering.”",
+		"Just Transition Fund. Het SolarDeck-pilotproject van Wattlab is mede gefinancierd door het Just Transition Fund (JTF) van de Europese Unie. Het JTF is een instrument binnen het cohesiebeleid 2021–2027, als eerste pijler van het Just Transition Mechanism binnen de European Green Deal, met als doel het bereiken van klimaatneutraliteit in de EU tegen 2050."
 	]
 }
 ]

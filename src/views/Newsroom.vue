@@ -35,7 +35,11 @@ export default {
       posts: [],
     }
   },
-
+  props: {
+    lang: {
+      type: String,
+    },
+  },
   computed: {
     heliosBackground() {
       return {
@@ -43,12 +47,13 @@ export default {
       }
     },
     visibleArticles() {
-      return this.newsRoom.filter((i) => i.visible === true)
+      return this.newsRoom.filter((i) => (i.visible == true && i.lang == this.lang) )
     },
     showArticles() {
       return this.posts
     },
   },
+
 
   methods: {
     async fetchPosts() {
@@ -99,7 +104,7 @@ export default {
             <template v-for="(item, index) in visibleArticles">
 
             <div class="col-md card-image my-3 mx-md-3">
-              <a style="text-decoration: none;" :href="`/en/newsroom/${item.year}/${item.month}/${item.url}`">
+              <a style="text-decoration: none;" :href="`/${item.lang}/newsroom/${item.year}/${item.month}/${item.url}`">
               <div class="card-image-container" v-if="false" style="background-image: url('/src/assets/ms-helios-proefvaart-53.jpg');"></div>
               <div class="card-text-container">
                 <h3 class="subtitle category_release">{{ item.type }}</h3>
@@ -114,9 +119,6 @@ export default {
           </div>
 
     </div> <!-- End container -->
-
-    {{ showArticles }}
-
 
   </div>
 

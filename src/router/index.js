@@ -26,6 +26,7 @@ const router = createRouter({
       path: '/:lang/newsroom',
       name: 'newsroom',
       component: Newsroom,
+      props: ({params}) => ({lang: params.lang })
     },{
       path: '/:lang/newsroom/:year/:month/:title',
       name: 'newsroom-article',
