@@ -1,25 +1,71 @@
-<script setup>
-
+<script>
 import { ref, computed } from 'vue'
-import { useRouter, RouterView } from 'vue-router';
+import { useRouter, RouterView } from 'vue-router'
 
-import heliosUrl from '/src/assets/ms-helios-proefvaart-53.jpg';
-import anetteUrl from '/src/assets/ms-vertom-annette-impression-full-scale.jpeg';
-import wattlabUrl from '/src/assets/logo-white.svg';
-import GWR from '/src/assets/logos/GWR_RecordHolder-Ribbon-SingleColour_White-TM-RGB.png';
-import MIA from '/src/assets/logos/maritime_award_logo_white.png';
+import { createClient } from '@sanity/client'
+import imageUrlBuilder from '@sanity/image-url'
+
+import heliosUrl from '/src/assets/ms-helios-proefvaart-53.jpg'
+import anetteUrl from '/src/assets/ms-vertom-annette-impression-full-scale.jpeg'
+import wattlabUrl from '/src/assets/logo-white.svg'
+import GWR from '/src/assets/logos/GWR_RecordHolder-Ribbon-SingleColour_White-TM-RGB.png'
+import MIA from '/src/assets/logos/maritime_award_logo_white.png'
+
+import newsRoom from '/src/assets/news.json'
+
+// https://cdn.sanity.io/images/fq3bkk1h/production/2661f4bc46d91062a81ca0a8c10f50cea6481578-2560x1440.jpg
 
 
-import newsRoom from '/src/assets/news.json';
-
-const heliosBackground = computed(() => ({
-  background: `url(${heliosUrl})`
-}))
-
-const visibleArticles = computed(() => {
-  return newsRoom.filter( i => i.visible == true );
+// Setup the Sanity client
+const sanityClient = createClient({
+  projectId: 'fq3bkk1h',
+  dataset: 'production',
+  apiVersion: '2023-01-01',
+  useCdn: true,
 })
 
+const builder = imageUrlBuilder(sanityClient)
+
+export default {
+  name: 'Newsroom',
+
+  data() {
+    return {
+      newsRoom,
+      posts: [],
+    }
+  },
+
+  computed: {
+    heliosBackground() {
+      return {
+        background: `url(${heliosUrl})`,
+      }
+    },
+    visibleArticles() {
+      return this.newsRoom.filter((i) => i.visible === true)
+    },
+    showArticles() {
+      return this.posts
+    },
+  },
+
+  methods: {
+    async fetchPosts() {
+      try {
+        const posts = await sanityClient.fetch(`*[_type == "post"]`)
+        this.posts = posts
+        console.log(posts)
+      } catch (error) {
+        console.error('Error fetching posts:', error)
+      }
+    }
+  },
+
+  created() {
+    this.fetchPosts() 
+  },
+}
 </script>
 
 <template>  
@@ -67,11 +113,11 @@ const visibleArticles = computed(() => {
 
           </div>
 
-          
-            
-        
-
     </div> <!-- End container -->
+
+    {{ showArticles }}
+
+
   </div>
 
 

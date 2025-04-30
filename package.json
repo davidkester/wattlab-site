@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "@sanity/client": "^6.29.1",
+    "@sanity/image-url": "^1.1.0",
     "bootstrap": "^5.3.3",
     "vue": "^3.4.21",
     "vue-router": "^4.5.0"

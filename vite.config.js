@@ -22,11 +22,14 @@ export default defineConfig({
       //'/api': 'http://localhost:3038/api',
       '/api': {
         //
-        target: 'http://localhost:3042',
+        //target: 'http://localhost:3042',
         //target: 'https://tmr.barea.io',
         //changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '/'), // Optional if paths remain identical
+        //rewrite: (path) => path.replace(/^\/api/, '/'), // Optional if paths remain identical
       },
     },
   }
 })
+
+
+
