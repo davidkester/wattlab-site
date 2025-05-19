@@ -64,53 +64,38 @@ onMounted(() => {
 
   <div class="container-test" style="height: calc(100vh - 62px); overflow-y: auto; ">
    
-    <div class="box box1" :style="heliosBackground">
-
-      <div class="inner" style="display: none; align-items: center; justify-content: center;">
-        <img :src='GWR' class="award-logo" style="max-width: 20%;" alt="Maritime Innovation Award Logo"/>
-      </div>
-
-      <div class="content-transparent content1">
-
-        <router-link class="navbar-brand abs" to="/en/solarhatch">
-          <h1 style="">SolarHatch</h1>
-
-          <div class="subtitle" style="color: white !important">for inland shipping</div>
-
-          <div class="body-content" >
-            <span style="font-style: italic;">Learn more</span> &#8594;
-          </div>
-
-        </router-link>
-
-      </div>
 
 
+      <router-link class="navbar-brand abs box box1" to="/en/solarhatch" :style="heliosBackground">
 
-    </div>
+        <div class="content-transparent content1">
+
+            <h1 style="">SolarHatch</h1>
+            <div class="subtitle" style="color: white !important">for inland shipping</div>
+
+            <div class="body-content" >
+              <span style="font-style: itaslic;">Learn more</span> &#8594;
+            </div>
+
+        </div>
+
+      </router-link>
 
 
-    <div class="box box2" :style="anetteBackground">
-      <div class="inner" style="display: none; align-items: center; justify-content: center;">
-        <img :src='MIA' class="award-logo" style="max-width: 40%;" alt="Maritime Innovation Award Logo"/>
-      </div>
+    <router-link class="navbar-brand abs box box2" :style="anetteBackground" to="/en/solardeck">
 
       <div class="content-transparent content2" style="">
+        <h1>SolarDeck</h1>
+        <div class="subtitle" style="color: white !important">for Seagoing vessels</div>
 
-        <router-link class="navbar-brand abs" to="/en/solardeck">
-
-          <h1>SolarDeck</h1>
-          <div class="subtitle" style="color: white !important">for Seagoing vessels</div>
-
-          <div class="body-content" >
-            <span style="font-style: italic;">Learn more</span> &#8594;
-          </div>
-
-        </router-link>
+        <div class="body-content" >
+          <span style="font-style: italic;">Learn more</span> &#8594;
+        </div>
 
       </div>
 
-    </div>
+    </router-link>
+
 
   </div>
 </div>
@@ -124,11 +109,6 @@ onMounted(() => {
 
 <style scoped>
 
-
-.award-logo {
-  transition: opacity 0.5s;
-  z-index: 2;
-}
 
 .container-test {
   display: flex;
@@ -147,7 +127,7 @@ onMounted(() => {
 
 .box {
   flex: 1;
-  transition: flex 0.5s ease;
+  transition: all 0.5s ease;
   /* Optional: add some basic styling for visibility */
   display: flex;
   align-items: center;
@@ -211,9 +191,7 @@ onMounted(() => {
   font-size: 14px;
   font-family: 'ProductSans';
   letter-spacing: 3px;
-  
   margin: 20px;
-
 }
 
 </style>

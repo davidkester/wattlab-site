@@ -122,8 +122,8 @@ h3 {
     padding: 14px 50px;
     border-radius: 5px;
     background-color: #ffbe00;
-    transition: background-color 300ms ease;
-    -webkit-transition: background-color 300ms ease;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
     font-size: 1.2rem;
     text-align: center;
     color: #29333D;
@@ -137,6 +137,7 @@ h3 {
 .wattlab-btn:hover {
     color: white;
     background-color: #df9d0e;
+    border-radius: 10px;
 }
 
 .wattlab-card-round {
@@ -189,7 +190,7 @@ h3 {
     background-position: 50% 50%;
     background-size: cover;
     background-color: white;
-  }
+}
 
 
 /* lg */

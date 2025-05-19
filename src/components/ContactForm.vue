@@ -1,5 +1,7 @@
 <script>
 
+  import CalendlyComponent from '/src/components/CalendlyComponent.vue';
+
 export default {
   data() {
     return {
@@ -7,6 +9,7 @@ export default {
     }
   },
   components: {
+    CalendlyComponent
   },
   watch: {
   },
@@ -84,7 +87,7 @@ export default {
  
 
 <div class="container-fluid wattlab-container" id="contact">
-    <div class="container py-5" >
+    <div class="container py-5">
 
       <div class="row">
 
@@ -101,6 +104,9 @@ export default {
               <b>Contact us</b>
               <div>+31&nbsp;(0)8&nbsp;50&nbsp;04&nbsp;32&nbsp;75</div>
               <div>info@wattlab.nl</div>
+            </div>
+            <div class="mb-3">
+              <b>Or book a meeting directly!</b>
             </div>
           </div>
         </div>
@@ -184,6 +190,15 @@ export default {
 
 
       </div>
+
+
+      <div class="row">
+        <div class="col" style="text-align: center;">
+
+          <CalendlyComponent />
+        </div>
+      </div> 
+
     </div> <!-- End container -->
   </div> <!-- End container-fluid -->
 
