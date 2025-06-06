@@ -63,16 +63,11 @@ onMounted(() => {
  <Navbar/>
 
   <div class="container-test" style="height: calc(100vh - 62px); overflow-y: auto; ">
-   
-    <div class="box box1" :style="heliosBackground">
 
-      <div class="inner" style="display: none; align-items: center; justify-content: center;">
-        <img :src='GWR' class="award-logo" style="max-width: 20%;" alt="Maritime Innovation Award Logo"/>
-      </div>
+    <router-link to="/en/solarhatch" class="box box1 navbar-brand abs" :style="heliosBackground">
 
       <div class="content-transparent content1">
 
-        <router-link class="navbar-brand abs" to="/en/solarhatch">
           <h1 style="">SolarHatch</h1>
 
           <div class="subtitle" style="color: white !important">for inland shipping</div>
@@ -81,36 +76,24 @@ onMounted(() => {
             <span style="font-style: italic;">Learn more</span> &#8594;
           </div>
 
-        </router-link>
-
       </div>
+    </router-link>
 
 
-
-    </div>
-
-
-    <div class="box box2" :style="anetteBackground">
-      <div class="inner" style="display: none; align-items: center; justify-content: center;">
-        <img :src='MIA' class="award-logo" style="max-width: 40%;" alt="Maritime Innovation Award Logo"/>
-      </div>
+    <router-link to="/en/solardeck" class="box box2 navbar-brand abs" :style="anetteBackground">
 
       <div class="content-transparent content2" style="">
 
-        <router-link class="navbar-brand abs" to="/en/solardeck">
+        <h1>SolarDeck</h1>
+        <div class="subtitle" style="color: white !important">for Seagoing vessels</div>
 
-          <h1>SolarDeck</h1>
-          <div class="subtitle" style="color: white !important">for Seagoing vessels</div>
-
-          <div class="body-content" >
-            <span style="font-style: italic;">Learn more</span> &#8594;
-          </div>
-
-        </router-link>
+        <div class="body-content" >
+          <span style="font-style: italic;">Learn more</span> &#8594;
+        </div>
 
       </div>
-
-    </div>
+      
+    </router-link>
 
   </div>
 </div>
@@ -124,11 +107,6 @@ onMounted(() => {
 
 <style scoped>
 
-
-.award-logo {
-  transition: opacity 0.5s;
-  z-index: 2;
-}
 
 .container-test {
   display: flex;
@@ -147,7 +125,7 @@ onMounted(() => {
 
 .box {
   flex: 1;
-  transition: flex 0.5s ease;
+  transition: all 0.5s ease;
   /* Optional: add some basic styling for visibility */
   display: flex;
   align-items: center;
@@ -170,11 +148,6 @@ onMounted(() => {
   flex: 2;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
   /* box-shadow: none; */
-}
-
-/* Transition effect for inner content */
-.inner {
-  transition: all 0.5s ease;
 }
 
 /* Fade out inner content on hover */
@@ -200,6 +173,7 @@ onMounted(() => {
 .content-transparent {
   color: white !important; 
   text-align: center;
+
 }
 
 /* Fade out inner content on hover */
