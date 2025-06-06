@@ -4,7 +4,7 @@
 
 <template>
 
-<div class="container-fluid wattlab-container"  style="background-color: rgb(240, 240, 240); color: rgb(17,36, 77);">
+<div class="container-fluid wattlab-container py-5"  style="background-color: rgb(240, 240, 240); color: rgb(17,36, 77);">
     <div class="container">
 
       <div style="text-align:center;">

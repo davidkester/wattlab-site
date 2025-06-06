@@ -17,6 +17,8 @@ import Cards from '/src/components/Cards.vue';
 import SimpleTwoComponent from '/src/components/SimpleTwoComponent.vue';
 import SimpleOneComponent from '/src/components/SimpleOneComponent.vue';
 
+import CalendlyComponent from '/src/components/CalendlyComponent.vue';
+
 import anetteUrl from '/src/assets/ms-vertom-annette-impression-full-scale.jpeg';
 import solardeckRender from '/src/assets/images/solardeck/solardeck.jpeg';
 import solardeckCloseUp from '/src/assets/images/solardeck/closeup.jpg';
@@ -88,7 +90,6 @@ const handySizeBackground = computed(() => ({
 
     <template #col1>
       <h2>Powering the Future of Bulk Dry Cargo</h2>
-
     </template>
 
     <template #col2>
@@ -98,6 +99,9 @@ const handySizeBackground = computed(() => ({
       <a href="#contact" class="wattlab-btn py-3" role="button" aria-pressed="true" style="max-width: 300px;">Contact us</a> 
     </template>
   </SimpleTwoComponent>
+
+  
+  
 
 
   <Cards>
@@ -161,11 +165,12 @@ const handySizeBackground = computed(() => ({
 
   <SimpleTwoComponent>
     <template #header>
-      <h2 class="mb-4">How does it work?</h2>
+      
     </template>
 
     <template  #col1>
       <div>
+        <h2 class="mb-4">How does it work?</h2>
         <p style="font-weight: bold;">A plug-and-play solar system designed for maritime conditions</p>
 
         <p>SolarDeck delivers clean, reliable energy directly on deck—reducing reliance on auxiliary engines. Built with robust marine-grade materials, the system is designed for fast installation and minimal maintenance.</p>
@@ -189,7 +194,7 @@ const handySizeBackground = computed(() => ({
 
 
 
-  <div class="container-fluid wattlab-container-white" style="background: rgb(240, 240, 240)">
+  <div class="container-fluid wattlab-container-white py-5" style="background: rgb(240, 240, 240)">
     <div class="container">
 
       <div style="text-align:center;">
@@ -302,6 +307,7 @@ const handySizeBackground = computed(() => ({
   <ContactForm :source="'solardeck'" :language="'en'"/>
 
 
+
     <div class="container-fluid wattlab-container" id="voordelen" style="background-color: rgb(17,36, 77); color: rgb(17,36, 77);">
       <div class="container" style="max-width: 700px;">
         <div style="text-align:center;">
@@ -322,8 +328,6 @@ const handySizeBackground = computed(() => ({
     </div> <!-- End container-fluid -->
 
  
-
-
 
   <Footer />
 

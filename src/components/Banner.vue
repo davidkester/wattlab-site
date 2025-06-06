@@ -64,6 +64,7 @@ onMounted(() => {
 
   <div class="container-test" style="height: calc(100vh - 62px); overflow-y: auto; ">
 
+
     <router-link to="/en/solarhatch" class="box box1 navbar-brand abs" :style="heliosBackground">
 
       <div class="content-transparent content1">
@@ -82,18 +83,21 @@ onMounted(() => {
 
     <router-link to="/en/solardeck" class="box box2 navbar-brand abs" :style="anetteBackground">
 
-      <div class="content-transparent content2" style="">
 
+      <div class="content-transparent content2" style="">
         <h1>SolarDeck</h1>
         <div class="subtitle" style="color: white !important">for Seagoing vessels</div>
+
 
         <div class="body-content" >
           <span style="font-style: italic;">Learn more</span> &#8594;
         </div>
 
       </div>
-      
+
+
     </router-link>
+
 
   </div>
 </div>
@@ -185,9 +189,7 @@ onMounted(() => {
   font-size: 14px;
   font-family: 'ProductSans';
   letter-spacing: 3px;
-  
   margin: 20px;
-
 }
 
 </style>

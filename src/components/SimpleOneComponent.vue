@@ -4,7 +4,7 @@
 
 <template>
 
-<div class="container-fluid wattlab-container-white">
+<div class="container-fluid wattlab-container-white py-5">
   <div class="container">
 
     <div style="text-align:center;">

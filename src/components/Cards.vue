@@ -7,7 +7,7 @@ import { ref, computed } from 'vue'
 
 <template>
 
-  <div class="container-fluid wattlab-container" id="voordelen" style="background-color: rgb(240, 240, 240); color: rgb(17,36, 77);">
+  <div class="container-fluid wattlab-container py-5" id="voordelen" style="background-color: rgb(240, 240, 240); color: rgb(17,36, 77);">
     <div class="container">
       <div style="text-align:center;">
         <slot name="header">
