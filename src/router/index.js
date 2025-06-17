@@ -14,8 +14,8 @@ const router = createRouter({
       name: 'home',
       component: Banner,
     },{
-      path: '/en/solardeck',
-      name: 'solardeck',
+      path: '/en/solar-flatrack',
+      name: 'flatrack',
       component: SolarDeckView,
     },{
       path: '/en/solarhatch',

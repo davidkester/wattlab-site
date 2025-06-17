@@ -67,7 +67,7 @@ const handySizeBackground = computed(() => ({
       <div class="">
 
         <div class="header-text">
-          <h1 class="text-white mb-5">SolarDeck by Wattlab</h1>
+          <h1 class="text-white mb-5">Solar Flatrack by Wattlab</h1>
           <div class="text-white my-5" style="line-height: 175%; font-weight: 500; font-size: 1.25rem;">
 
             A cost-effective solar energy system for bulk carriers of all sizes. 
@@ -93,9 +93,9 @@ const handySizeBackground = computed(() => ({
     </template>
 
     <template #col2>
-      <p style="font-weight: bold;">SolarDeck is a proven solar energy solution, now optimized for bulk carriers of all sizes. It offers a sustainable and cost-effective alternative to traditional power sources—enhancing operational efficiency, reducing fuel consumption, and delivering a strong financial return. Now available for both newbuild as well as existing vessels.</p>
+      <p style="font-weight: bold;">Solar Flatrack is a proven solar energy solution, now optimized for bulk carriers of all sizes. It offers a sustainable and cost-effective alternative to traditional power sources—enhancing operational efficiency, reducing fuel consumption, and delivering a strong financial return. Now available for both newbuild as well as existing vessels.</p>
 
-      <p>With a return on investment in just 2–5 years, SolarDeck enables shipowners and operators to meet environmental regulations while improving profitability—without compromising on reliability or performance.</p>
+      <p>With a return on investment in just 2–5 years, a Solar Flatrack system enables shipowners and operators to meet environmental regulations while improving profitability—without compromising on reliability or performance.</p>
       <a href="#contact" class="wattlab-btn py-3" role="button" aria-pressed="true" style="max-width: 300px;">Contact us</a> 
     </template>
   </SimpleTwoComponent>
@@ -132,35 +132,7 @@ const handySizeBackground = computed(() => ({
 
   </Cards>
 
-  <SimpleOneComponent>
-    <template #header>
-      <h2 class="pb-2 mb-3 mx-auto">Proven Impact</h2>
 
-    </template>
-
-    <template #col1>
-      <table>
-        <tr>
-          <th>Annual Energy Yield</th>
-          <td class="highlight">10 MWh</td>
-        </tr>
-        <tr>
-          <th>Fuel Savings (per year)</th>
-          <td class="highlight">30 metric tons</td>
-        </tr>
-        <tr>
-          <th>CO2 Reduction (per Year)</th>
-          <td class="highlight">96 metric tons</td>
-        </tr>
-      </table>
-
-      <div style="text-align: center;" class="pt-3">
-        <small>Based on MV Vertom Anette (7280 MT)</small>
-      </div>
-
-    </template>
-
-  </SimpleOneComponent>
 
 
   <SimpleTwoComponent>
@@ -173,7 +145,7 @@ const handySizeBackground = computed(() => ({
         <h2 class="mb-4">How does it work?</h2>
         <p style="font-weight: bold;">A plug-and-play solar system designed for maritime conditions</p>
 
-        <p>SolarDeck delivers clean, reliable energy directly on deck—reducing reliance on auxiliary engines. Built with robust marine-grade materials, the system is designed for fast installation and minimal maintenance.</p>
+        <p>Solar Flatracks deliver clean, reliable energy directly on deck—reducing reliance on auxiliary engines. Built with robust marine-grade materials, the system is designed for fast installation and minimal maintenance.</p>
 
         <ul>
           <li>Easily implemented on both newbuild and existing vessels</li>
@@ -235,6 +207,44 @@ const handySizeBackground = computed(() => ({
         </div>
 
       </div>
+
+<div class="row pt-5">
+  <div class="">
+      <table>
+        <tr>
+          <th></th>
+          <th class="highlight">Coaster</th>
+          <th class="highlight">Handy size</th>
+          <th class="highlight">Cape size</th>
+        </tr>
+        <tr>
+          <th>DWAT</th>
+          <td class="highlight">7.280 MT</td>
+          <td class="highlight">37.000 MT</td>
+          <td class="highlight">180.000 MT</td>
+        </tr>
+        <tr>
+          <th>Solar Energy Yield (per year)</th>
+          <td class="highlight">76 MWh</td>
+          <td class="highlight">344 MWh</td>
+          <td class="highlight">791 MWh</td>
+        </tr>
+        <tr>
+          <th>Fuel Savings (per year)</th>
+          <td class="highlight">20 MT</td>
+          <td class="highlight">20 MT</td>
+          <td class="highlight">20 MT</td>
+        </tr>
+        <tr>
+          <th>CO2 Reduction (per Year)</th>
+          <td class="highlight">64 MT</td>
+          <td class="highlight">308 MT</td>
+          <td class="highlight">714 MT</td>
+        </tr>
+      </table>
+      </div>
+      </div>
+
     </div> 
   </div> 
 
@@ -307,7 +317,6 @@ const handySizeBackground = computed(() => ({
   <ContactForm :source="'solardeck'" :language="'en'"/>
 
 
-
     <div class="container-fluid wattlab-container" id="voordelen" style="background-color: rgb(17,36, 77); color: rgb(17,36, 77);">
       <div class="container" style="max-width: 700px;">
         <div style="text-align:center;">
@@ -322,6 +331,12 @@ const handySizeBackground = computed(() => ({
             <img :src="JTFLogo" alt="JTF - Just Transition Fund" style="width: 100%;">
           </div>
 
+        </div>
+
+        <div class="row">
+          <div style="text-align: center; color: white; font-weight: lighter;">
+          The project ‘PV Systems for Seagoing Vessels’ focuses on the development and demonstration of an innovative Solar Deck solution. This project is co-funded by the European Union through the Just Transition Fund (JTF)
+          </div>
         </div>
 
       </div> <!-- End container -->

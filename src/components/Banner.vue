@@ -81,11 +81,11 @@ onMounted(() => {
     </router-link>
 
 
-    <router-link to="/en/solardeck" class="box box2 navbar-brand abs" :style="anetteBackground">
+    <router-link to="/en/solar-flatrack" class="box box2 navbar-brand abs" :style="anetteBackground">
 
 
       <div class="content-transparent content2" style="">
-        <h1>SolarDeck</h1>
+        <h1>Solar Flatrack</h1>
         <div class="subtitle" style="color: white !important">for Seagoing vessels</div>
 
 

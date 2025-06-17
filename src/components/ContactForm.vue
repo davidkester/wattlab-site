@@ -193,7 +193,7 @@ export default {
 
 
       <div class="row">
-        <div class="col" style="text-align: center;">
+        <div v-if="false" class="col" style="text-align: center;">
 
           <CalendlyComponent />
         </div>
