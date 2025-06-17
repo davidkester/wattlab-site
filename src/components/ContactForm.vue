@@ -105,7 +105,7 @@ export default {
               <div>+31&nbsp;(0)8&nbsp;50&nbsp;04&nbsp;32&nbsp;75</div>
               <div>info@wattlab.nl</div>
             </div>
-            <div class="mb-3">
+            <div class="mb-3" v-if="false">
               <b>Or book a meeting directly!</b>
             </div>
           </div>
