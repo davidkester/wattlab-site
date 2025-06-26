@@ -5,6 +5,8 @@ import SolarDeckView from '../views/SolarDeckView.vue';
 import InlandView from '../views/InlandView.vue';
 import Newsroom from '../views/Newsroom.vue';
 import NewsroomArticleView from '../views/NewsroomArticleView.vue';
+import TermsAndConditions from '../views/TermsAndConditions.vue';
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +34,10 @@ const router = createRouter({
       name: 'newsroom-article',
       component: NewsroomArticleView,
       props: ({params}) => ({lang: params.lang, year: params.year, month: params.month, title: params.title })
+    },{
+      path: '/terms-and-conditions',
+      name: 'terms-and-conditions',
+      component: TermsAndConditions
     }
   ]
   

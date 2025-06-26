@@ -41,7 +41,7 @@ import linkedinIcon from '/src/assets/icons/linkedin.png';
               <li><a style="color: #9d9d9d" href="/terms-and-conditions">Terms & conditions</a></li>
               <li><a style="color: #9d9d9d" href="/en/newsroom">Newsroom</a></li>
               <li><a style="color: #9d9d9d" href="/en/solarhatch">Inland‑waterway vessels</a></li>
-              <li><a style="color: #9d9d9d" href="/en/solardeck">Seagoing vessels</a></li>
+              <li><a style="color: #9d9d9d" href="/en/solar-flatrack">Seagoing vessels</a></li>
             </ul>
           </div>
           <div class="col-lg-2 my-auto" style="">
