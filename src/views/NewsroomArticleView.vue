@@ -3,13 +3,22 @@
 import newsRoom from '/src/assets/news.json';
 import heliosUrl from '/src/assets/ms-helios-proefvaart-53.jpg';
 
-//const heliosBackground = computed(() => ({ background: `url(${heliosUrl})`}))
+import { createClient } from '@sanity/client'
+
+// Setup the Sanity client
+const sanityClient = createClient({
+  projectId: 'fq3bkk1h',
+  dataset: 'production',
+  apiVersion: '2023-01-01',
+  useCdn: true,
+})
+
 
 export default {
   data() {
     return {
       newsRoom,
-      article: {}
+      article: null
     }
   },
   components: {
@@ -39,9 +48,97 @@ export default {
   watch: {
   },
   methods: {
+    async fetchPosts() {
+      try {
+        //const posts = await sanityClient.fetch(`*[_type == "press-release" && language == ${this.lang}]`)
+
+        const query = `
+          *[slug.current == $slug][0]{
+            title,
+            type,
+            intro,
+            slug,
+            language,
+            publishedAt,
+            mainImage->{
+              "caption": captionType[locale == ^.language][0],
+              image{
+                asset->{
+                  _id,
+                  url,
+                  metadata { lqip, dimensions }
+                },
+              }
+            },
+            sharedImages[]->{
+              image{
+                asset->{
+                  _id,
+                  url,
+                  metadata { lqip, dimensions }
+                }
+              },
+              "caption": captionType[locale == ^.language][0]
+            },
+            files[]{
+              asset->{
+                url,
+                originalFilename,
+                mimeType,
+                size
+              }
+            },
+            body,
+            "_translations": *[_type == "translation.metadata" && references(^._id)].translations[].value->{
+              title,
+              slug,
+              language
+            }
+          }`;
+
+        const slug = this.title;
+        const posts = await sanityClient.fetch(query, { slug });
+
+        this.article = posts;
+        console.log(posts)
+      } catch (error) {
+        console.error('Error fetching posts:', error)
+      }
+    },
+    formatDate(dateString) {
+      const date = new Date(dateString);
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+      const year = date.getFullYear();
+      return `${day}-${month}-${year}`;
+    },
+    blockTag(style) {
+      if (style === 'h1') return 'h1'
+      if (style === 'h2') return 'h2'
+      return 'p'
+    },
+    renderSpan (span, block) {
+      let html = span.text
+
+      span.marks.forEach(mark => {
+        if (mark === 'strong') {
+          html = `<strong>${html}</strong>`
+        } else if (mark === 'em') {
+          html = `<em>${html}</em>`
+        } else {
+          const def = block.markDefs.find(d => d._key === mark)
+          if (def && def._type === 'link') {
+            html = `<a href="${def.href}">${html}</a>`
+          }
+        }
+      })
+
+      return html
+    }
   },
   mounted() { 
-    this.article = this.newsRoom.find( i => { return i.url == this.title })
+    //this.article = this.newsRoom.find( i => { return i.url == this.title });
+    this.fetchPosts();
   }
 }
 
@@ -58,13 +155,14 @@ export default {
   </header>
 
   <section class="" style="background-color: #FAF0E6">
-  <article class="article">
+
+  <article class="article" v-if="article">
     <div class="article-header">
       <div class="category component">
         <div class="component-content">
             <div class="category-eyebrow">
                 <h3 class="subtitle category_release">{{ article.type }}</h3>
-                <span class="category-eyebrow__date">{{ article.date }}</span>
+                <span class="category-eyebrow__date">{{ formatDate (article.publishedAt ) }}</span>
             </div>
         </div>
       </div>
@@ -76,9 +174,9 @@ export default {
       </div>
 
       <div class="tertiarynav component">
-          <div class="component-content">
-            <hr>
-          </div>
+        <div class="component-content">
+          <hr>
+        </div>
       </div>
 
     </div>
@@ -92,17 +190,59 @@ export default {
       </div>
     </div>
 
+    <div class="image component ">
+      <picture class="image-big image-fullbleed body-copy-wide">
+        <img :src="article.mainImage.image.asset.url" class="picture-image" style="width: 100%; border-radius: 12px;" :alt="article.mainImage.caption.value.altText"/>
+      </picture>
+
+      <div class="component-content">
+        <small>{{article.mainImage.caption.value.caption}}. <a :href="article.mainImage.image.asset.url" download>Download</a></small><br>
+      </div>
+    </div>
     
 
     <div class="pagebody text component">
-      <div class="component-content" v-for="(p, i) in article.body ">
+      <div class="component-content">
 
-        <div class="pagebody-copy">{{p}}</div>          
+        <component v-for="block in article.body" :key="block._key" :is="blockTag(block.style)">
+          <div class="component-content">
+            <div class="pagebody-copy">
+              <span v-for="span in block.children" :key="span._key" v-html="renderSpan(span, block)">
+              </span>
+            </div>
+          </div>
+        </component>
       
       </div>
     </div>
 
-   
+
+    <div class="image component" v-for="e in article.sharedImages">
+      <picture class="image-big image-fullbleed body-copy-wide">
+        <img :src="e.image.asset.url" class="picture-image" style="width: 100%; border-radius: 12px;" :alt="e.caption.value.altText"/>
+      </picture>
+
+      <div class="component-content">
+        <small>{{e.caption.value.caption}}. <a :href="e.image.asset.url" download>Download</a></small><br>
+      </div>
+    </div>
+
+    <div class="pagebody text component">
+      <div class="component-content">
+
+        <div v-if="article.files != null" style="font-weight: bold;">Downloads</div>
+
+        <div class="component-content" v-for="f in article.files">
+          <div><a :href="f.asset.url">{{f.asset.originalFilename}}</a> ({{ f.asset.size /1000 }} kB)</div>
+        </div>
+      
+      </div>
+    </div>
+
+
+    
+
+ 
 
   </article>
 </section>

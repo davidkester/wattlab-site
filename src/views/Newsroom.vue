@@ -58,17 +58,51 @@ export default {
   methods: {
     async fetchPosts() {
       try {
-        const posts = await sanityClient.fetch(`*[_type == "post"]`)
+        //const posts = await sanityClient.fetch(`*[_type == "press-release" && language == ${this.lang}]`)
+
+        const query = `*[
+          (_type == "press-release" || _type == "post") && language == $language
+        ] 
+| order(publishedAt desc) {
+  title,
+          language,
+          slug,
+          type,
+          intro,
+          publishedAt,
+          "year": publishedAt[0..3],
+          "month": publishedAt[5..6],
+          mainImage->{
+            image{
+              asset->{
+                _id,
+                url,
+                metadata { lqip, dimensions }
+              }
+            }
+          }
+        }`;
+
+        const language = this.lang;
+        const posts = await sanityClient.fetch(query, { language });
+
         this.posts = posts
-        console.log(posts)
+        console.log(posts);
       } catch (error) {
         console.error('Error fetching posts:', error)
       }
+    },
+    formatDate(dateString) {
+      const date = new Date(dateString);
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+      const year = date.getFullYear();
+      return `${day}-${month}-${year}`;
     }
   },
 
   created() {
-    this.fetchPosts() 
+    this.fetchPosts()
   },
 }
 </script>
@@ -96,9 +130,9 @@ export default {
 
 
   <div class="container-fluid py-5" id="product-groups" style="background-color: rgb(240, 240, 240); border-top: 1px solid rgba(52, 66, 104, 0.07); border-bottom: 1px solid rgba(52, 66, 104, 0.07);">
-      <div class="container my-5">
+      <div class="container my-5" v-if="false">
 
-        <h2 style="text-align: center;" class="mb-5">Latest news</h2>
+        <h2 style="text-align: center;" class="mb-5">Latest news (Quick version)</h2>
 
           <div class="row" >
             <template v-for="(item, index) in visibleArticles">
@@ -111,6 +145,33 @@ export default {
                 <div class="category-eyebrow__date">{{ item.date }}</div>
                 <div class="card-title mb-2">{{ item.title }}</div>
                 <div class="content-col">{{ item.intro }}</div>
+              </div>
+              </a>
+            </div>
+          </template>
+
+          </div>
+
+    </div> <!-- End container -->
+
+
+    <div class="container my-5">
+
+        <h2 style="text-align: center;" class="mb-5">Latest news</h2>
+
+          <div class="row" >
+            <template v-for="(item, index) in posts">
+
+            <div class="col-md card-image my-3 mx-md-3">
+
+              <a style="text-decoration: none;" :href="`/${item.language}/newsroom/${item.year}/${item.month}/${item.slug.current}`">
+              <div class="card-image-container" v-if="false" style="background-image: url('/src/assets/ms-helios-proefvaart-53.jpg');"></div>
+              <div class="card-text-container">
+                <h3 class="subtitle category_release">{{ item.type }}</h3>
+                <div class="category-eyebrow__date">{{ formatDate (item.publishedAt ) }}</div>
+                <img :src="item.mainImage.image.asset.url + '?h=400'" style="width: 100%;" class="my-2"/>
+                <div class="card-title my-2">{{ item.title }}</div>
+                <div class="content-col">{{ item.intro }}</div>                
               </div>
               </a>
             </div>

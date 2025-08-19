@@ -89,7 +89,7 @@ const handySizeBackground = computed(() => ({
     </template>
 
     <template #col1>
-      <h2>Powering the Future of Bulk Dry Cargo</h2>
+      <h2 style="font-size: 3em;">Powering the Future<br>of Bulk Dry Cargo</h2>
     </template>
 
     <template #col2>
@@ -231,9 +231,9 @@ const handySizeBackground = computed(() => ({
         </tr>
         <tr>
           <th>Fuel Savings (per year)</th>
-          <td class="highlight">20 MT</td>
-          <td class="highlight">20 MT</td>
-          <td class="highlight">20 MT</td>
+          <td class="highlight">18 MT</td>
+          <td class="highlight">83 MT</td>
+          <td class="highlight">190 MT</td>
         </tr>
         <tr>
           <th>CO2 Reduction (per Year)</th>
